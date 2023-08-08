@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="Base.js"></script>
+  <script src="Car.js"></script>
+</head>
+
+<body>
+
+  <a-scene background="color:white">
+
+    <a-assets>        
+      <a-asset-item id="cars-obj" src = "./cars/tinker.obj"></a-asset-item>
+      <a-asset-item id = "cars-mtl" src = "./cars/obj.mtl"></a-asset-item>
+
+    </a-assets>
+
+    <a-camera position="0 0 -50"></a-camera>
+
+    <a-entity id = "base" position = "0 -10 5" scale = "0.2 0.2 0.2" base-component></a-entity>
+    <a-entity id="car" obj-model = "obj:#cars-obj; mtl:#cars-mtl" position="5 -10 1" rotation="270 0 0" scale = "0.6 0.6 0.6" car-component></a-entity>
+
+    
+
+  </a-scene>
+
+</body>
+
+</html>
+
